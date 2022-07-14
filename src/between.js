@@ -1,9 +1,11 @@
-const getvaluebetween = (str, p, s) => {
+const getValueBetween = (str, p, s) => {
   i = str.indexOf(p);
+
   if (i === -1) return "";
   else {
     k = i + p.length;
     str = str.substring(k);
+
     if (s) {
       i = str.indexOf(s);
       if (i === -1) {
@@ -13,5 +15,8 @@ const getvaluebetween = (str, p, s) => {
       }
     }
   }
+
   return str;
 };
+
+module.exports = getValueBetween;
